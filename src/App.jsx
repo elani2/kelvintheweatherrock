@@ -34,8 +34,8 @@ function App() {
     }
     function getImagesForCondition(condition, tempF) {
       if (!condition) return {
-        background: '/images/background_auora.png',
-        kelvin: '/images/kelvin_default.png',
+        background: `${import.meta.env.BASE_URL}images/background_auora.png`,
+        kelvin: `${import.meta.env.BASE_URL}images/kelvin_default.png`,
         kelvinX: '50%',
         kelvinY: '80%',
         kelvinSize: '300px'
@@ -45,8 +45,8 @@ function App() {
 
       if((lower.includes('sun')) && (tempF < highTemp )) {
         return {
-          background: '/images/background_sunny.png',
-          kelvin: '/images/kelvin_happy.png',
+          background: `${import.meta.env.BASE_URL}images/background_sunny.png`,
+          kelvin: `${import.meta.env.BASE_URL}images/kelvin_happy.png`,
           kelvinX: '50%',
           kelvinY: '67%',
           kelvinSize: '300px'
@@ -54,48 +54,48 @@ function App() {
     //HIGH HEAT dependent on temperature instead
       }  else if ((lower.includes('sun')) && (tempF >= highTemp )) {
         return {
-          background: '/images/background_highHeat.png',
-          kelvin: '/images/kelvin_highHeat.png',
+          background: `${import.meta.env.BASE_URL}images/background_highHeat.png`,
+          kelvin: `${import.meta.env.BASE_URL}images/kelvin_highHeat.png`,
           kelvinX: '50%',
           kelvinY: '80%',
           kelvinSize: '300px'
         };
       } else if (lower.includes ('cloudy') || lower.includes('overcast')) {
         return {
-          background: '/images/background_overcast.png',
-          kelvin: '/images/kelvin_happy.png',
+          background: `${import.meta.env.BASE_URL}images/background_overcast.png`,
+          kelvin: `${import.meta.env.BASE_URL}images/kelvin_happy.png`,
           kelvinX: '50%',
           kelvinY: '80%',
           kelvinSize: '300px'
         };
       } else if (lower.includes ('rain')) {
         return {
-          background: '/images/background_rainy.png',
-          kelvin: '/images/kelvin_wet_happy.png',
+          background: `${import.meta.env.BASE_URL}images/background_rainy.png`,
+          kelvin: `${import.meta.env.BASE_URL}images/kelvin_wet_happy.png`,
           kelvinX: '50%',
           kelvinY: '80%',
           kelvinSize: '300px'
         };
       } else if (lower.includes ('snow')) {
         return {
-          background: '/images/background_snow.png',
-          kelvin: '/images/kelvin_cold_happy.png',
+          background: `${import.meta.env.BASE_URL}images/background_snow.png`,
+          kelvin: `${import.meta.env.BASE_URL}images/kelvin_cold_happy.png`,
           kelvinX: '50%',
           kelvinY: '80%',
           kelvinSize: '300px'
         };
       } else if (lower.includes ('fog') || lower.includes('mist')) {
         return {
-          background: '/images/background_mist.png',
-          kelvin: '/images/kelvin_happy.png',
+          background: `${import.meta.env.BASE_URL}images/background_mist.png`,
+          kelvin: `${import.meta.env.BASE_URL}images/kelvin_happy.png`,
           kelvinX: '50%',
           kelvinY: '80%',
           kelvinSize: '300px'
         };
       } else if (lower.includes ('dust')) {
         return {
-          background: '/images/background_dust.png',
-          kelvin: '/images/kelvin_sad.png',
+          background: `${import.meta.env.BASE_URL}images/background_dust.png`,
+          kelvin: `${import.meta.env.BASE_URL}images/kelvin_sad.png`,
           kelvinX: '50%',
           kelvinY: '85%',
           kelvinSize: '300px'
