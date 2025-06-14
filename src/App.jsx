@@ -33,7 +33,7 @@ function App() {
 
     }
     function getImagesForCondition(condition, tempF) {
-      if (!condition) return {
+      if (!condition || (lower.includes('clear')) return {
         background: `${import.meta.env.BASE_URL}images/background_auora.png`,
         kelvin: `${import.meta.env.BASE_URL}images/kelvin_default.png`,
         kelvinX: '50%',
