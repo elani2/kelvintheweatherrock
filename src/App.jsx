@@ -33,7 +33,7 @@ function App() {
 
     }
     function getImagesForCondition(condition, tempF) {
-      if (!condition || (lower.includes('clear')) return {
+      if (!condition) return {
         background: `${import.meta.env.BASE_URL}images/background_auora.png`,
         kelvin: `${import.meta.env.BASE_URL}images/kelvin_default.png`,
         kelvinX: '50%',
@@ -52,7 +52,15 @@ function App() {
           kelvinSize: '300px'
         };
     //HIGH HEAT dependent on temperature instead
-      }  else if ((lower.includes('sun')) && (tempF >= highTemp )) {
+      }  else if (lower.includes('clear')) {
+        return {
+          background: `${import.meta.env.BASE_URL}images/background_auora.png`,0
+          kelvin: `${import.meta.env.BASE_URL}images/kelvin_default.png`,
+          kelvinX: '50%',
+          kelvinY: '80%',
+          kelvinSize: '300px'
+        };
+      }else if ((lower.includes('sun')) && (tempF >= highTemp )) {
         return {
           background: `${import.meta.env.BASE_URL}images/background_highHeat.png`,
           kelvin: `${import.meta.env.BASE_URL}images/kelvin_highHeat.png`,
