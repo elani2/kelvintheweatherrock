@@ -54,7 +54,7 @@ function App() {
     //HIGH HEAT dependent on temperature instead
       }  else if (lower.includes('clear')) {
         return {
-          background: `${import.meta.env.BASE_URL}images/background_auora.png`,0
+          background: `${import.meta.env.BASE_URL}images/background_auora.png`,
           kelvin: `${import.meta.env.BASE_URL}images/kelvin_default.png`,
           kelvinX: '50%',
           kelvinY: '80%',
